@@ -40,13 +40,13 @@ npm install
 
 **4) Migracion de esquema de base de datos**
 * Iniciar los modulos MYSQL y Apache desde el panel de XAMPP.
-![Alt panel xampp](./Migracion/Panel_XAMPP.PNG?raw=true "Panel XAMPP")
+![Alt panel xampp](./Backend/Migracion/Panel_XAMPP.PNG?raw=true "Panel XAMPP")
 * Abrir XAMPP e iniciar los servicios de **Apache Web Server** y **MySQL Database**
 * Abir el navegador a la(http://localhost/phpmyadmin/)**.
 * En la pestaña Importar, boton "Seleccionar archivo" buscar la ruta local al archivo "Creacion_Schema.sql". 
 El archivo se encuenta en la ruta: **./Backend/Migracion/Creacion_Schema.sql**
 * Ejecutar la importacion con el boton "Continuar"
-![Alt importacion data](./Migracion/Importacion.PNG?raw=true "importacion data")
+![Alt importacion data](./Backend/Migracion/Importacion.PNG?raw=true "importacion data")
 **Opcional
 Ejecutar el archivo "Creacion_Schema.sql" en MySQL Workbench.
 

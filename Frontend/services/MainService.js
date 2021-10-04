@@ -35,9 +35,7 @@ class MainService {
                 return result;
             }
         } catch (error) {
-            // var errorCode = error.code;
-            // var errorMessage = error.message;
-            console.log('error');
+
             console.error(error)
             // alert(error);
         }
