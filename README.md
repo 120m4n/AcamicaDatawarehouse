@@ -3,12 +3,12 @@
 
 Sistema para la administracion de contactos de clientes para una compañia.
 
-#Modo Freelance
+# Modo Freelance
 
-##Entregables
-- Carpeta FrontEnd
+## Entregables
+- Carpeta FrontEnd: 
 - Carpeta BackEnd
-
+- Readme.md
 
 ## Requisitos
 
@@ -17,9 +17,6 @@ Sistema para la administracion de contactos de clientes para una compañia.
 
 ### Instalar XAMPP
   - [Descargar XAMPP](https://www.apachefriends.org/es/download.html)
-
-### Instalar MySQL Workbench (*opcional)
-  - [Descargar Postman](https://www.postman.com/product/api-client/)
 
 ### Instalar Postman
   - [Descargar Postman](https://www.postman.com/product/api-client/)
@@ -31,20 +28,21 @@ Sistema para la administracion de contactos de clientes para una compañia.
 
 * Clonar el repositorio desde github accediendo al link: https://github.com/120m4n/AcamicaDatawarehouse.git
 
-**2)Descomprimir los archivos y ubicar una terminar en la carpeta Backend
+**2) Descomprimir los archivos y ubicar una terminal en la carpeta Backend**
+
 
 **3) Instalar dependencias**
 ```
 npm install
 ```
 
-**3) Migracion de esquema de base de datos**
+**4) Migracion de esquema de base de datos**
 * Iniciar los modulos MYSQL y Apache desde el panel de XAMPP.
 ![Alt panel xampp](./Migracion/Panel_XAMPP.PNG?raw=true "Panel XAMPP")
 * Abrir XAMPP e iniciar los servicios de **Apache Web Server** y **MySQL Database**
 * Abir el navegador a la(http://localhost/phpmyadmin/)**.
 * En la pestaña Importar, boton "Seleccionar archivo" buscar la ruta local al archivo "Creacion_Schema.sql". 
-El archivo se encuenta en la ruta: **./Migracion/Creacion_Schema.sql**
+El archivo se encuenta en la ruta: **./Backend/Migracion/Creacion_Schema.sql**
 * Ejecutar la importacion con el boton "Continuar"
 ![Alt importacion data](./Migracion/Importacion.PNG?raw=true "importacion data")
 **Opcional
@@ -79,4 +77,10 @@ node ./src/app.js
     "password":"usuario"
 }
 
+
+## NOTAS:
+### Modo Freelance
+Se escogio modo freelance para agilizar la creacion de las interfaces
+### Libreria Prisma
+Prisma es un conjunto de herramientas para bases de datos de código abierto. Permite generar consultas anidadas mas facil que el sql tradicional.
 
