@@ -4,6 +4,8 @@
 Sistema para la administracion de contactos de clientes para una compañia.
 
 # Modo Freelance
+El desarrolador crea sus propias vistas para desplegar la informacion, manteniendo la funcionalidad en conjunto.
+
 
 ## Entregables
 - Carpeta FrontEnd: 
@@ -21,9 +23,9 @@ Sistema para la administracion de contactos de clientes para una compañia.
 ### Instalar Postman
   - [Descargar Postman](https://www.postman.com/product/api-client/)
 
-## Despliegue
+# Despliegue
 
-## BackEnd
+# BackEnd
 **1) Preparacion de archivos**
 
 * Clonar el repositorio desde github accediendo al link: https://github.com/120m4n/AcamicaDatawarehouse.git
@@ -49,29 +51,38 @@ El archivo se encuenta en la ruta: **./Backend/Migracion/Creacion_Schema.sql**
 Ejecutar el archivo "Creacion_Schema.sql" en MySQL Workbench.
 
 * Modelo Entidad-Relacion.
-![Alt modelo ER](./Migracion/ER_Diagram.PNG?raw=true "Modelo ER")
+![Alt modelo ER](./Backend/Migracion/ER_Diagram.PNG?raw=true "Modelo ER")
 
-**4) Generar el modelo de prisma
+**4) Generar el modelo de prisma**
 ```
 npx prisma generate
 ```
 
 **5) Iniciar el servidor**
-
+```
 node ./src/app.js
+```
 
-## FrontEnd
+# FrontEnd
 
-**1) Inicializar index.html**
+**1) Ubicar una terminal en la carpeta FrontEnd**
+
+**2) Inicializar Visual Studio Code**
+```
+code .
+```
+
+**3) Lanzar el liver server **
+![Alt Live Server](./Backend/Migracion/LiveServer.png?raw=true "Live Server")
 
 ## CREDENCIALES PARA PRUEBA
-# ADMIN
+### ADMIN
 {
     "username":"adminstrador",
     "password":"adminstrador"
 }
 
-# USER
+### USER
 {
     "username":"usuario",
     "password":"usuario"
@@ -83,4 +94,9 @@ node ./src/app.js
 Se escogio modo freelance para agilizar la creacion de las interfaces
 ### Libreria Prisma
 Prisma es un conjunto de herramientas para bases de datos de código abierto. Permite generar consultas anidadas mas facil que el sql tradicional.
+### Responsive
+El frontend se realizo para ajustarse solamente a su version de escritorio
+### Live server
+Los navegadores actuales bloquean el acceso cruzado a (js, css, etc) mediante CORS, para evitar esto se hace necesario inicializar el index.html desde un servidor.
+
 
