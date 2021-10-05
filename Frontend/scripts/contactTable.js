@@ -31,20 +31,21 @@ class ContactTable {
             field: "id",
             sortable: true,
             valign: 'middle',
-            width: 250,
+            width: 200,
             formatter: this.contactFormatter,
         }, {
             title: 'Pais<span class="d-none">;</span>/Region',
             field: "cities.countries.name",
             sortable: true,
             valign: 'middle',
-            width: 186,
+            width: 120,
             formatter: this.countryFormatter,
         }, {
             title: "Compañia",
             field: "companies.name",
             sortable: true,
             valign: 'middle',
+            width: 200,
             formatter: this.companyFormatter
         }, 
         {
@@ -52,13 +53,13 @@ class ContactTable {
             field: "job_tittle",
             valign: 'middle',
             sortable: true,
-            width: 185,
+            width: 120,
         },
         {
             title: "Canal Preferido",
             field: "contacts_channels",
             valign: 'middle',
-            width: 186,
+            width: 170,
             formatter: this.channelsFormatter,
         },
         {
@@ -66,7 +67,7 @@ class ContactTable {
             field: "interest",
             valign: 'middle',
             sortable: true,
-            width: 186,
+            width: 170,
             formatter: this.interestFormatter,
         },
         {
@@ -175,7 +176,7 @@ class ContactTable {
 
     companyFormatter(value, row, index) {
         return [
-            '<span class="d-inline-block text-truncate col-10">' + value + '</span>',
+            '<span class="d-inline-block text-truncate" style="max-width: 180px;">' + value + '</span>',
         ].join("");
     }
 

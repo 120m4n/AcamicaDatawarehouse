@@ -140,9 +140,11 @@ const handlerEventUpdateContact = (e)=> {
     console.log('botones activos')
     Swal.fire('Conflicto!','No se puede editar un contacto mientras se esta editando uno de sus canales','warning');
     return false;
+  }else{
+    ui.editContact(contactId);
   }
 
-  ui.editContact(contactId);
+  
 };
 
 
