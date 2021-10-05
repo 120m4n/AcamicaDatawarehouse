@@ -218,6 +218,8 @@ class UI {//es la clase que interactua con el navegador
       if(result.data.address) {
       // console.log(result.data.address); 
         document.getElementById('contact__input_direccion').setAttribute('value', result.data.address);
+      }else{
+        document.getElementById('contact__input_direccion').setAttribute('value', '');
       }
       //remove disable contact__input_direccion
       // document.getElementById('contact__input_direccion').removeAttribute('disabled');
