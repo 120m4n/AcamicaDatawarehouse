@@ -72,7 +72,7 @@ node ./src/app.js
 code .
 ```
 
-**3) Lanzar el liver server **
+**3) Lanzar el liver server**
 ![Alt Live Server](./Backend/Migracion/LiveServer.png?raw=true "Live Server")
 
 ## CREDENCIALES PARA PRUEBA

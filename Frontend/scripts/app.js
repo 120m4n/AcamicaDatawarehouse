@@ -771,6 +771,7 @@ $select_slider.addEventListener('change', function(e) {
   }   
 );
 
+// CONTACTOS MODAL
 $contactModal.addEventListener('show.bs.modal', function (event) {
   // Button that triggered the modal
   const button = event.relatedTarget; 

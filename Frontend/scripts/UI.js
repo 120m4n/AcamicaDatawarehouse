@@ -216,10 +216,11 @@ class UI {//es la clase que interactua con el navegador
       document.getElementById('contact_cargo').setAttribute('value', result.data.job_tittle);
       document.getElementById('contact_email').setAttribute('value', result.data.email);
       if(result.data.address) {
+      // console.log(result.data.address); 
         document.getElementById('contact__input_direccion').setAttribute('value', result.data.address);
       }
       //remove disable contact__input_direccion
-      document.getElementById('contact__input_direccion').removeAttribute('disabled');
+      // document.getElementById('contact__input_direccion').removeAttribute('disabled');
       //set style width to progress-bar
       // document.querySelector('.progress-bar').style.width = `${result.data.interest}%`;
       //set value progress-bar

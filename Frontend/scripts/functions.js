@@ -129,7 +129,7 @@ class Functions {
     //set color backgorund to progress_bar
     document.querySelector('.progress-bar').style.setProperty('background-color','#1CC1F5');
     //clear contact__input_direccion
-    document.getElementById('contact__input_direccion').value = '';
+    // document.getElementById('contact__input_direccion').value = '';
 
   }
   
