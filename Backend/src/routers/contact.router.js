@@ -46,6 +46,13 @@ router
     validationMiddleware.id,
     AuthorizationUser,
     ContactController.Delete
+  )
+
+  .delete(
+    "/:id/channels",
+    validationMiddleware.id,
+    AuthorizationUser,
+    ContactController.DeleteChannels
   );
 
 module.exports = router;

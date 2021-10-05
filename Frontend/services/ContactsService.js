@@ -35,6 +35,12 @@ class ContactsService {
         const _data = response.data;
         return _data;
     }
+
+    async deleteContactChannels(contactId){
+        const response = await mainService.httpRequest('contacts/' + contactId + '/channels', 'DELETE');
+        const _data = response.data;
+        return _data;
+    }
 }
 
 export default ContactsService;

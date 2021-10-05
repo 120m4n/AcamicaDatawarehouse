@@ -184,16 +184,6 @@ const CreateChannels = async (req, res) => {
       });
     }
 
-    const oldcontacts_channels = contactExists.contacts_channels;
-    // console.log(contactExists);
-
-    oldcontacts_channels.forEach( async(element) => {
-      await prisma.contacts_channels.delete({
-        where: { id : Number(element.id) },
-      });
-    });
-
-
     const conctact_channel = await prisma.contacts_channels.create({
       data: body,
     });
@@ -295,11 +285,59 @@ const Delete = async (req, res) => {
   }
 };
 
+const DeleteChannels = async (req, res) => {
+  const { id } = req.params;
+  try {
+    let contactExists;
+
+    contactExists = await prisma.contacts.findFirst({
+      where: { id: Number(id) },
+      select: { 
+        id:true,
+        contacts_channels: true,
+      },
+    });
+
+    if (!contactExists) {
+      return res.status(404).json({
+        success: false,
+        error: "Contact Not Exists",
+        data: {},
+      });
+    }
+
+    const oldcontacts_channels = contactExists.contacts_channels;
+
+    //if existe remove 
+    if (oldcontacts_channels.length > 0) {
+      oldcontacts_channels.forEach( async(element) => {
+        // console.log(element.id);
+        await prisma.contacts_channels.delete({
+          where: { id : Number(element.id) },
+        });
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Successful Delete Contact Channels",
+      data: {},
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      message: err.message,
+      data: {},
+    });
+  }
+}
+
 module.exports = {
   getContacts,
   getContactById,
   Create,
   Update,
   CreateChannels,
+  DeleteChannels,
   Delete,
 };

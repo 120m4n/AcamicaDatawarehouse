@@ -335,7 +335,7 @@ COMMIT;
 START TRANSACTION;
 USE `mydb`;
 INSERT INTO `mydb`.`contacts` (`id`, `username`, `lastname`, `email`, `job_tittle`, `create_time`, `address`, `interest`, `imgUrl`, `users_id`, `companies_id`, `cities_id`) VALUES
-(1, 'adriana', 'Cujar', 'acujar@mail.com', 'Profesi', '2021-08-28 21:58:04', NULL, 0, NULL, 3, 1, 1),
+(1, 'adriana', 'Cujar', 'acujar@mail.com', 'Profesional', '2021-08-28 21:58:04', NULL, 0, NULL, 3, 1, 1),
 (2, 'amparo', 'Montoya', 'omontoya@mail.com', 'Dependiente/a', '2021-08-28 21:58:04', NULL, 100, NULL, 1, 2, 2),
 (3, 'andrea', 'Pilar', 'apilar@mail.com', 'Oficial', '2021-08-28 21:58:04', NULL, 25, NULL, 3, 3, 3),
 (4, 'erika', 'Vanegas', 'avanegas@mail.com', 'Enfermero/a', '2021-08-28 21:58:04', NULL, 25, NULL, 1, 4, 4),

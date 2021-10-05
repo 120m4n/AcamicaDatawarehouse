@@ -406,6 +406,9 @@ class UI {//es la clase que interactua con el navegador
     const channels =[ ..._contactData.contacts_channels]; //clone
     _contactData.contacts_channels = undefined;
 
+    //delete previous channels
+    await contactsService.deleteContactChannels(contactId);
+
     const result = await contactsService.putData(contactId, _contactData);
     if (result.success) {
       const contactId = result.data;
